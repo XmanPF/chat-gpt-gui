@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>TauriApp</title>
+  <base href="/chat-gpt-gui/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>@charset "UTF-8";:root{width:100%;height:100%;font-family:Arial,sans-serif;font-size:16px;font-weight:400;color:#f6f6f6;background-color:#2f2f2f;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%}html,body{background-color:#2f2f2f}html{overflow:hidden}body,app-root{width:100%;height:100%;position:fixed;left:0;top:0}*{margin:0;padding:0;list-style:none}</style><link rel="stylesheet" href="styles.c9af2e63b1d7cbc5.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.c9af2e63b1d7cbc5.css"></noscript></head>
+<body>
+<app-root></app-root>
+<script>
+    let lastTouchEnd = 0;
+    document.documentElement.addEventListener('touchend', function (event) {
+        let now = Date.now();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+</script>
+<script src="runtime.d33a1a71501d9b0b.js" type="module"></script><script src="polyfills.48cdcf253cdb1f3e.js" type="module"></script><script src="scripts.cdf170c634e7e0a1.js" defer></script><script src="main.e6f4d5475bd6278c.js" type="module"></script>
+
+</body></html>
