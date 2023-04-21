@@ -2,6 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 extern crate machine_uid;
+mod setup;
 
 use ureq;
 use tauri::Window;
@@ -26,15 +27,7 @@ fn init_process(window: Window) {
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet, init_process, get_machine_uid, request])
-        .setup(|app| {
-            // #[cfg(debug_assertions)] // only include this code on debug builds
-            // {
-                let mut window = app.get_window("main").unwrap();
-            //     window.open_devtools();
-            //     window.close_devtools();
-            // }
-            Ok(())
-        })
+        .setup(setup::init)
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

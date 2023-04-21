@@ -61,8 +61,9 @@
         "minHeight": 800,
         "hiddenTitle": true,
         "visible": false,
-        "theme": "Dark"
+        "transparent": true
       }
-    ]
+    ],
+    "macOSPrivateApi": true
   }
 }
